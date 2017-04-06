@@ -1,16 +1,21 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../styles/styles.html">
 
 <dom-module id="home-page">
 
     <!-- Defines the element's style and local DOM -->
     <template>
-        <style>
+        <style include="styles">
             :host {
                 display: block;
                 padding: 16px;
             }
+
+            #heading {
+                color: var(--main-heading-color, #0a3142);
+            }
         </style>
-        <h1>Hello, World!</h1>
+        <h1 id="heading">Goodbye, World!</h1>
     </template>
 
     <!-- Creates the element's prototype and registers it -->
