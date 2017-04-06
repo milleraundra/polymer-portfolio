@@ -27,6 +27,16 @@
             <h1 class="heading">Hello, World!</h1>
             <profile-image class="heading"></profile-image>
         </div>
+        <div>
+            <template is="dom-repeat" items="[[skills]]">
+                <div>[[item.title]]</div>
+                <ul>
+                    <template is="dom-repeat" items="[[item.list]]">
+                        <li>[[item]]</li>
+                    </template>
+                </ul>
+            </template>
+        </div>
 
     </template>
 
@@ -35,50 +45,54 @@
         Polymer({
             is: 'home-page',
             properties: {
-                route: Object
+                route: Object,
+                skills: {
+                    type: Array,
+                    value: [
+                        {
+                            "title": "JavaScript",
+                            "icon": "",
+                            "list": [
+                                "ES5",
+                                "ES6",
+                                "RxJS",
+                                "Node.js",
+                                "Loopback",
+                                "REST APIs"
+                            ]
+                        },
+                        {
+                            "title": "Desgin",
+                            "icon": "",
+                            "list": [
+                                "HTML5",
+                                "CSS3",
+                                "SASS",
+                                "Polymer",
+                                "Material Design",
+                                "Materialize",
+                                "Bootstrap"
+                            ]
+                        },
+                        {
+                            "title": "PHP",
+                            "icon": "",
+                            "list": [
+                                "Drupal",
+                                "Wordpress",
+                                "Twig",
+                                "Sie",
+                                "Material Design",
+                                "Materialize",
+                                "Bootstrap"
+                            ]
+                        }
+
+                    ]
+                }
             }
 
-//                [
-//                {
-//                    "title": "JavaScript",
-//                    "icon": "",
-//                    "list": [
-//                        "ES5",
-//                        "ES6",
-//                        "RxJS",
-//                        "Node.js",
-//                        "Loopback",
-//                        "REST APIs"
-//                    ]
-//                },
-//                    {
-//                        "title": "Desgin",
-//                        "icon": "",
-//                        "list": [
-//                            "HTML5",
-//                            "CSS3",
-//                            "SASS",
-//                            "Polymer",
-//                            "Material Design",
-//                            "Materialize",
-//                            "Bootstrap"
-//                        ]
-//                    },
-//                    {
-//                        "title": "PHP",
-//                        "icon": "",
-//                        "list": [
-//                            "Drupal",
-//                            "Wordpress",
-//                            "Twig",
-//                            "Sie",
-//                            "Material Design",
-//                            "Materialize",
-//                            "Bootstrap"
-//                        ]
-//                    }
 //
-//                ]
         });
     </script>
 
