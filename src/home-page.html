@@ -1,6 +1,7 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
 <link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
 <link rel="import" href="../elements/profile-image.html">
+<link rel="import" href="../elements/experience-tiles/experience-tile.html">
 <link rel="import" href="../styles/styles.html">
 
 <dom-module id="home-page">
@@ -29,12 +30,13 @@
         </div>
         <div>
             <template is="dom-repeat" items="[[skills]]">
-                <div>[[item.title]]</div>
-                <ul>
-                    <template is="dom-repeat" items="[[item.list]]">
-                        <li>[[item]]</li>
-                    </template>
-                </ul>
+                <experience-tile data="[[item]]"></experience-tile>
+                <!--<div>[[item.title]]</div>-->
+                <!--<ul>-->
+                    <!--<template is="dom-repeat" items="[[item.list]]">-->
+                        <!--<li>[[item]]</li>-->
+                    <!--</template>-->
+                <!--</ul>-->
             </template>
         </div>
 

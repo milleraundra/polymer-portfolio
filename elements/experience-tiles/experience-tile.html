@@ -1,23 +1,29 @@
-<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/polymer/polymer.html">
 
 <dom-module id="experience-tile">
 
     <!-- Defines the element's style and local DOM -->
     <template>
-        <style>
-            :root {
-                --main-heading-color: #0b97cf;
-
-                --profile-image-styles: {
-                }
+        <style include="iron-flex iron-flex-alignment">
+            :host {
+                display: block;
             }
-
         </style>
+        <h1>[[data.title]]</h1>
+        <ul>
+            <template is="dom-repeat" items="[[data.list]]">
+                <li>[[item]]</li>
+            </template>
+        </ul>
     </template>
-        <h1>Experience tile.</h1>
     <script>
         Polymer({
-            is: 'experience-tile'
+            is: 'experience-tile',
+            properties: {
+                data: {
+                    type: Object
+                }
+            }
         })
     </script>
 </dom-module>
