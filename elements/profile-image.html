@@ -4,10 +4,16 @@
 <dom-module id="profile-image">
     <template>
         <style>
+            :host {
 
+            }
+
+            #profile-picture {
+                --iron-image-width: 400px;
+            }
         </style>
         <h1>This is a section about me!</h1>
-        <iron-image src="../img/aundra-miller.jpg"></iron-image>
+        <iron-image id="profile-picture" src="../img/aundra-miller.jpg"></iron-image>
     </template>
     <script>
         Polymer({
