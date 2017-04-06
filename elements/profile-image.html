@@ -1,19 +1,22 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
 <link rel="import" href="../bower_components/iron-image/iron-image.html">
+<link rel="import" href="../styles/styles.html">
 
 <dom-module id="profile-image">
     <template>
-        <style>
+        <style include="styles">
             :host {
 
             }
 
             #profile-picture {
-                --iron-image-width: 400px;
+                --iron-image-width: 200px;
+                border-radius: 50%;
+                /*@apply(--profile-image-styles);*/
             }
         </style>
         <h1>This is a section about me!</h1>
-        <iron-image id="profile-picture" src="../img/aundra-miller.jpg"></iron-image>
+        <iron-image id="profile-picture" src="../images/aundra-miller.jpg"></iron-image>
     </template>
     <script>
         Polymer({
