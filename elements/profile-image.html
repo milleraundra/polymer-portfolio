@@ -7,11 +7,19 @@
         <style include="styles">
             :host {
                 /*display: block;*/
+                padding: 8px;
             }
 
             #profile-picture {
                 --iron-image-width: 200px;
                 border-radius: 50%;
+            }
+
+            @media only screen and (max-width: 500px) {
+                #profile-picture {
+                    --iron-image-width: 100px;
+                    border-radius: 50%;
+                }
             }
         </style>
         <iron-image id="profile-picture" src="../images/aundra-miller.jpg"></iron-image>

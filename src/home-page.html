@@ -13,8 +13,14 @@
                 display: block;
             }
 
+            #main-wrapper {
+                @apply(--layout-vertical);
+                @apply(--layout-center);
+            }
+
             #main-header {
-                /*@apply(--layout);*/
+                padding: 16px;
+                max-width: 800px;
                 @apply(--layout-vertical);
                 @apply(--layout-center);
             }
@@ -35,20 +41,26 @@
 
             }
         </style>
-        <div id="main-header">
-            <h1 class="heading">Hello, World!</h1>
-            <profile-image class="heading"></profile-image>
-        </div>
-        <div id="main-skills">
-            <template is="dom-repeat" items="[[skills]]">
-                <experience-tile class="tile" data="[[item]]"></experience-tile>
-                <!--<div>[[item.title]]</div>-->
-                <!--<ul>-->
-                    <!--<template is="dom-repeat" items="[[item.list]]">-->
-                        <!--<li>[[item]]</li>-->
-                    <!--</template>-->
-                <!--</ul>-->
-            </template>
+        <div id="main-wrapper">
+            <div id="main-header">
+                <profile-image class="heading"></profile-image>
+                <h1>Hi there!</h1>
+                <p>My name is Aundra Miller. I am a full stack web developer located outside of Portland, OR.</p>
+                <p>For me, programming perfectly combines of my love for technology and the thrill of creating something new. Technology is always changing, advancing, and improving to meet the needs of real people and make our lives as programmers easier.</p>
+                <p>Combine that with a passion for building websites and applications that improve people's lives and delight them in the process, and it's just too good to be true.</p>
+            </div>
+            <div id="main-skills">
+                <template is="dom-repeat" items="[[skills]]">
+                    <experience-tile class="tile" data="[[item]]"></experience-tile>
+                    <!--<div>[[item.title]]</div>-->
+                    <!--<ul>-->
+                        <!--<template is="dom-repeat" items="[[item.list]]">-->
+                            <!--<li>[[item]]</li>-->
+                        <!--</template>-->
+                    <!--</ul>-->
+                </template>
+            </div>
+
         </div>
 
     </template>
