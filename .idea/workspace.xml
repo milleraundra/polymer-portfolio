@@ -4,7 +4,6 @@
     <list default="true" id="b358613d-821e-4ba5-ba51-8ea604f64d02" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/elements/experience-tiles/experience-tile.html" afterPath="$PROJECT_DIR$/elements/experience-tiles/experience-tile.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/home-page.html" afterPath="$PROJECT_DIR$/src/home-page.html" />
     </list>
     <ignored path="portfolio-polymer.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -57,8 +56,8 @@
       <file leaf-file-name="experience-tile.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/elements/experience-tiles/experience-tile.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="20" column="13" lean-forward="true" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+            <state relative-caret-position="195">
+              <caret line="21" column="31" lean-forward="true" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -317,7 +316,7 @@
       <workItem from="1491434594383" duration="750000" />
       <workItem from="1491438507426" duration="3690000" />
       <workItem from="1491500740430" duration="2861000" />
-      <workItem from="1491583177283" duration="386000" />
+      <workItem from="1491583177283" duration="975000" />
     </task>
     <task id="LOCAL-00001" summary="hide default drawer layout&#10;">
       <created>1491434848283</created>
@@ -403,11 +402,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491517124505</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="add padding and styles to experience tile">
+      <created>1491584759308</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1491584759308</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9207000" />
+    <option name="totallyTimeSpent" value="9796000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1301" height="744" extended-state="0" />
@@ -470,7 +476,8 @@
     <MESSAGE value="add template data for display" />
     <MESSAGE value="create unordered list with dom-repeat" />
     <MESSAGE value="add structure to experience-tile component&#10;update home page to use experience-tile" />
-    <option name="LAST_COMMIT_MESSAGE" value="add structure to experience-tile component&#10;update home page to use experience-tile" />
+    <MESSAGE value="add padding and styles to experience tile" />
+    <option name="LAST_COMMIT_MESSAGE" value="add padding and styles to experience tile" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -699,8 +706,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/elements/experience-tiles/experience-tile.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="20" column="13" lean-forward="true" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        <state relative-caret-position="195">
+          <caret line="21" column="31" lean-forward="true" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
           <folding />
         </state>
       </provider>
