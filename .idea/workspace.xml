@@ -4,6 +4,7 @@
     <list default="true" id="b358613d-821e-4ba5-ba51-8ea604f64d02" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/elements/experience-tiles/experience-tile.html" afterPath="$PROJECT_DIR$/elements/experience-tiles/experience-tile.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/home-page.html" afterPath="$PROJECT_DIR$/src/home-page.html" />
     </list>
     <ignored path="portfolio-polymer.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,21 +44,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home-page.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="home-page.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/home-page.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="930">
-              <caret line="84" column="46" lean-forward="false" selection-start-line="84" selection-start-column="46" selection-end-line="84" selection-end-column="46" />
+            <state relative-caret-position="255">
+              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="experience-tile.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="experience-tile.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/elements/experience-tiles/experience-tile.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="21" column="31" lean-forward="true" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+            <state relative-caret-position="120">
+              <caret line="16" column="40" lean-forward="true" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -113,8 +114,8 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/elements/profile-image.html" />
         <option value="$PROJECT_DIR$/src/my-app.html" />
-        <option value="$PROJECT_DIR$/src/home-page.html" />
         <option value="$PROJECT_DIR$/elements/experience-tiles/experience-tile.html" />
+        <option value="$PROJECT_DIR$/src/home-page.html" />
       </list>
     </option>
   </component>
@@ -316,7 +317,7 @@
       <workItem from="1491434594383" duration="750000" />
       <workItem from="1491438507426" duration="3690000" />
       <workItem from="1491500740430" duration="2861000" />
-      <workItem from="1491583177283" duration="975000" />
+      <workItem from="1491583177283" duration="1483000" />
     </task>
     <task id="LOCAL-00001" summary="hide default drawer layout&#10;">
       <created>1491434848283</created>
@@ -409,11 +410,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491584759308</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="update styles">
+      <created>1491585509887</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1491585509887</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9796000" />
+    <option name="totallyTimeSpent" value="10304000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1301" height="744" extended-state="0" />
@@ -471,13 +479,13 @@
     <MESSAGE value="size image&#10;add image" />
     <MESSAGE value="change image&#10;update styles" />
     <MESSAGE value="add flexbox" />
-    <MESSAGE value="update styles" />
     <MESSAGE value="create file for experience tile&#10;update .gitignore" />
     <MESSAGE value="add template data for display" />
     <MESSAGE value="create unordered list with dom-repeat" />
     <MESSAGE value="add structure to experience-tile component&#10;update home page to use experience-tile" />
     <MESSAGE value="add padding and styles to experience tile" />
-    <option name="LAST_COMMIT_MESSAGE" value="add padding and styles to experience tile" />
+    <MESSAGE value="update styles" />
+    <option name="LAST_COMMIT_MESSAGE" value="update styles" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -696,18 +704,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/home-page.html">
+    <entry file="file://$PROJECT_DIR$/elements/experience-tiles/experience-tile.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="930">
-          <caret line="84" column="46" lean-forward="false" selection-start-line="84" selection-start-column="46" selection-end-line="84" selection-end-column="46" />
+        <state relative-caret-position="120">
+          <caret line="16" column="40" lean-forward="true" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/elements/experience-tiles/experience-tile.html">
+    <entry file="file://$PROJECT_DIR$/src/home-page.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="21" column="31" lean-forward="true" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+        <state relative-caret-position="255">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding />
         </state>
       </provider>

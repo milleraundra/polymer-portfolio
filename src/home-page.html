@@ -19,6 +19,13 @@
                 @apply(--layout-center);
             }
 
+            #main-skills {
+                @apply(--layout-horizontal);
+                @apply(--layout-wrap);
+                @apply(--layout-center-justified);
+
+            }
+
             .heading {
                 color: var(--main-heading-color, #0a3142);
             }
@@ -32,7 +39,7 @@
             <h1 class="heading">Hello, World!</h1>
             <profile-image class="heading"></profile-image>
         </div>
-        <div>
+        <div id="main-skills">
             <template is="dom-repeat" items="[[skills]]">
                 <experience-tile class="tile" data="[[item]]"></experience-tile>
                 <!--<div>[[item.title]]</div>-->
