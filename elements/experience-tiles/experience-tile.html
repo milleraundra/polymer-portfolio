@@ -8,13 +8,27 @@
             :host {
                 display: block;
             }
+
+            #tile-container {
+                padding: 16px;
+            }
+
+            #tile-list {
+                list-style-type: none;
+                columns: 2;
+                -webkit-columns: 2;
+                -moz-columns: 2;
+            }
+
         </style>
-        <h1>[[data.title]]</h1>
-        <ul>
-            <template is="dom-repeat" items="[[data.list]]">
-                <li>[[item]]</li>
-            </template>
-        </ul>
+        <div id="tile-container">
+            <h1>[[data.title]]</h1>
+            <ul id="tile-list">
+                <template is="dom-repeat" items="[[data.list]]">
+                    <li>[[item]]</li>
+                </template>
+            </ul>
+        </div>
     </template>
     <script>
         Polymer({
