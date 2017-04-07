@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b358613d-821e-4ba5-ba51-8ea604f64d02" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/home-page.html" afterPath="$PROJECT_DIR$/src/home-page.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/my-app.html" afterPath="$PROJECT_DIR$/src/my-app.html" />
     </list>
     <ignored path="portfolio-polymer.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,8 +25,8 @@
       <file leaf-file-name="my-app.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/my-app.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="75" column="53" lean-forward="false" selection-start-line="75" selection-start-column="53" selection-end-line="75" selection-end-column="53" />
+            <state relative-caret-position="284">
+              <caret line="81" column="40" lean-forward="true" selection-start-line="81" selection-start-column="40" selection-end-line="81" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -323,7 +321,7 @@
       <workItem from="1491434594383" duration="750000" />
       <workItem from="1491438507426" duration="3690000" />
       <workItem from="1491500740430" duration="2861000" />
-      <workItem from="1491583177283" duration="4358000" />
+      <workItem from="1491583177283" duration="4380000" />
     </task>
     <task id="LOCAL-00001" summary="hide default drawer layout&#10;">
       <created>1491434848283</created>
@@ -437,11 +435,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491587523250</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="add starter app-header bar">
+      <created>1491589652954</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1491589652954</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13179000" />
+    <option name="totallyTimeSpent" value="13201000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1301" height="744" extended-state="0" />
@@ -507,7 +512,8 @@
     <MESSAGE value="update styles" />
     <MESSAGE value="implement flex to help with mobile to desktop" />
     <MESSAGE value="add a short, unedited bio and more flex alignment" />
-    <option name="LAST_COMMIT_MESSAGE" value="add a short, unedited bio and more flex alignment" />
+    <MESSAGE value="add starter app-header bar" />
+    <option name="LAST_COMMIT_MESSAGE" value="add starter app-header bar" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -736,8 +742,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/my-app.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="75" column="53" lean-forward="false" selection-start-line="75" selection-start-column="53" selection-end-line="75" selection-end-column="53" />
+        <state relative-caret-position="284">
+          <caret line="81" column="40" lean-forward="true" selection-start-line="81" selection-start-column="40" selection-end-line="81" selection-end-column="40" />
           <folding />
         </state>
       </provider>
