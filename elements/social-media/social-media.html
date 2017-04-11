@@ -32,9 +32,6 @@
         Polymer({
             is: 'social-media',
 
-//            properties: {
-//                src: String
-//            }
             contactHandler: function(e) {
                 if (e && e.srcElement && e.srcElement.id) {
                     var id = (e.srcElement.id == "img") ? e.srcElement.parentNode.id : e.srcElement.id; //Safari hack. click event falls through to img inside iron-img.
@@ -45,11 +42,9 @@
                         case 'github-icon':
                             this.navigateToGitHub();
                             break;
-                        case 'email-icon':
-                            this.scrollDownToContact();
-                            break;
                         default:
                             //TODO scroll down to contact section at the bottom of the page;
+                            this.scrollDownToContact();
                             break;
                     }
                 }
