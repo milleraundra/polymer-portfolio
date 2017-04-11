@@ -46,7 +46,7 @@
                             this.navigateToGitHub();
                             break;
                         case 'email-icon':
-                            this.navigateToSendEmail();
+                            this.scrollDownToContact();
                             break;
                         default:
                             //TODO scroll down to contact section at the bottom of the page;
@@ -56,13 +56,15 @@
             },
 
             navigateToLinkedIn: function() {
-                console.log('to linkedin we go!');
+                window.open('https://www.linkedin.com/in/aundramiller', '_blank');
             },
             navigateToGitHub: function() {
-                console.log('to github we go!');
+                window.open('https://www.github.com/milleraundra', '_blank');
             },
-            navigateToSendEmail: function() {
-                console.log('to email we go!');
+            scrollDownToContact: function() {
+                this.fire('scroll-to-contact');
+//                window.open('mailto:miller.aundra@gmail.com', '_blank');
+//                console.log('to email we go!');
             }
         });
     </script>
