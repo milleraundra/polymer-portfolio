@@ -23,9 +23,9 @@
 
         </style>
         <div id="social-media-wrapper" class="layout horizontal">
-            <iron-image id="linkedin-icon" on-tap="contactHandler" class="navigation-image" src="../../images/linkedin-94px.png"></iron-image>
-            <iron-image id="github-icon" on-tap="contactHandler" class="navigation-image" src="../../images/github-64px.png"></iron-image>
-            <iron-icon id="email-icon" on-tap="contactHandler" class="navigation-icon" icon="icons:mail"></iron-icon>
+            <iron-image id="linkedin-icon" name="linkedin-icon" on-tap="contactHandler" class="navigation-image" src="../../images/linkedin-94px.png"></iron-image>
+            <iron-image id="github-icon" name="github-icon" on-tap="contactHandler" class="navigation-image" src="../../images/github-64px.png"></iron-image>
+            <iron-icon id="email-icon" name="email-icon" on-tap="contactHandler" class="navigation-icon" icon="icons:mail"></iron-icon>
         </div>
     </template>
     <script>
@@ -37,8 +37,8 @@
 //            }
             contactHandler: function(e) {
                 if (e && e.srcElement && e.srcElement.id) {
-                    console.log(e.srcElement.id);
-                    switch (e.srcElement.id) {
+                    var id = (e.srcElement.id == "img") ? e.srcElement.parentNode.id : e.srcElement.id; //Safari hack. click event falls through to img inside iron-img.
+                    switch (id) {
                         case 'linkedin-icon':
                             this.navigateToLinkedIn();
                             break;
