@@ -1,6 +1,6 @@
-<link rel="import" href="../bower_components/polymer/polymer.html">
-<link rel="import" href="../bower_components/iron-image/iron-image.html">
-<link rel="import" href="../styles/styles.html">
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/iron-image/iron-image.html">
+<link rel="import" href="../../styles/styles.html">
 
 <dom-module id="profile-image">
     <template>
@@ -22,11 +22,15 @@
                 }
             }
         </style>
-        <iron-image id="profile-picture" src="../images/aundra-miller.jpg"></iron-image>
+        <iron-image id="profile-picture" src="[[src]]"></iron-image>
     </template>
     <script>
         Polymer({
-            is: 'profile-image'
+            is: 'profile-image',
+
+            properties: {
+                src: String
+            }
         });
     </script>
 </dom-module>
