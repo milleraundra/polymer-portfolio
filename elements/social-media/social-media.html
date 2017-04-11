@@ -1,10 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/iron-image/iron-image.html">
+<link rel="import" href="../../styles/styles.html">
 
-</body>
-</html>
+<dom-module id="profile-image">
+    <template>
+        <style include="styles">
+            :host {
+                display: block;
+            }
+
+            .navigation-icon {
+                --iron-image-width: 32px;
+                padding: 8px;
+            }
+
+        </style>
+        <iron-image id="linkedin-icon" class="navigation-icon" src="../images/In-2C-48px-TM.png"></iron-image>
+        <iron-image id="github-icon" class="navigation-icon" src="../images/GitHub-Mark-64px.png"></iron-image>
+    </template>
+    <script>
+        Polymer({
+            is: 'profile-image',
+
+            properties: {
+                src: String
+            }
+        });
+    </script>
+</dom-module>
