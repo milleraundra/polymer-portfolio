@@ -1,22 +1,41 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 <link rel="import" href="../../bower_components/iron-image/iron-image.html">
+<link rel="import" href="../../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
 <link rel="import" href="../../styles/styles.html">
 
 <dom-module id="social-media">
     <template>
-        <style include="styles">
+        <style include="styles iron-flex iron-flex-alignment">
             :host {
                 display: block;
             }
 
-            .navigation-icon {
-                --iron-image-width: 24px;
+            .navigation-image {
+                --iron-image-width: 26px;
                 padding: 8px;
             }
 
+            .navigation-icon {
+                --iron-icon-width: 26px;
+                padding: 8px;
+            }
+
+            #github-icon {
+                --iron-image-width: 22px;
+            }
+
+            /*#social-media-wrapper {*/
+                /*border-top: 1px solid red;*/
+                /*border-bottom: 1px solid red;*/
+            /*}*/
+
         </style>
-        <iron-image id="linkedin-icon" class="navigation-icon" src="../../images/linkedin-94px.png"></iron-image>
-        <iron-image id="github-icon" class="navigation-icon" src="../../images/github-64px.png"></iron-image>
+        <div id="social-media-wrapper" class="layout horizontal">
+            <iron-image id="linkedin-icon" class="navigation-image" src="../../images/linkedin-94px.png"></iron-image>
+            <iron-image id="github-icon" class="navigation-image" src="../../images/github-64px.png"></iron-image>
+            <iron-icon id="email-icon" class="navigation-icon" icon="icons:mail"></iron-icon>
+        </div>
     </template>
     <script>
         Polymer({
