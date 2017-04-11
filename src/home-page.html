@@ -32,6 +32,11 @@
 
             }
 
+            .navigation-icon {
+                --iron-image-width: 32px;
+                padding: 8px;
+            }
+
             .heading {
                 color: var(--main-heading-color, #0a3142);
             }
@@ -44,6 +49,12 @@
         <div id="main-wrapper">
             <div id="main-header">
                 <profile-image class="heading"></profile-image>
+                <!--<social-media>-->
+                <div>
+                    <iron-image id="linkedin-icon" class="navigation-icon" src="../images/In-2C-48px-TM.png"></iron-image>
+                    <iron-image id="github-icon" class="navigation-icon" src="../images/GitHub-Mark-64px.png"></iron-image>
+                </div>
+                <!--</social-media>-->
                 <h1>Hi there!</h1>
                 <p>My name is Aundra Miller. I am a full stack web developer located outside of Portland, OR.</p>
                 <p>For me, programming perfectly combines of my love for technology and the thrill of creating and building. Technology is always changing, advancing, and improving to meet the needs of real people and make our lives as programmers easier.</p>
