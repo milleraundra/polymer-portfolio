@@ -2,7 +2,7 @@
 <link rel="import" href="../../bower_components/iron-image/iron-image.html">
 <link rel="import" href="../../styles/styles.html">
 
-<dom-module id="profile-image">
+<dom-module id="social-media">
     <template>
         <style include="styles">
             :host {
@@ -10,21 +10,21 @@
             }
 
             .navigation-icon {
-                --iron-image-width: 32px;
+                --iron-image-width: 24px;
                 padding: 8px;
             }
 
         </style>
-        <iron-image id="linkedin-icon" class="navigation-icon" src="../images/In-2C-48px-TM.png"></iron-image>
-        <iron-image id="github-icon" class="navigation-icon" src="../images/GitHub-Mark-64px.png"></iron-image>
+        <iron-image id="linkedin-icon" class="navigation-icon" src="../../images/linkedin-94px.png"></iron-image>
+        <iron-image id="github-icon" class="navigation-icon" src="../../images/github-64px.png"></iron-image>
     </template>
     <script>
         Polymer({
-            is: 'profile-image',
+            is: 'social-media'
 
-            properties: {
-                src: String
-            }
+//            properties: {
+//                src: String
+//            }
         });
     </script>
 </dom-module>
