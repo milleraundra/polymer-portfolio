@@ -23,18 +23,47 @@
 
         </style>
         <div id="social-media-wrapper" class="layout horizontal">
-            <iron-image id="linkedin-icon" class="navigation-image" src="../../images/linkedin-94px.png"></iron-image>
-            <iron-image id="github-icon" class="navigation-image" src="../../images/github-64px.png"></iron-image>
-            <iron-icon id="email-icon" class="navigation-icon" icon="icons:mail"></iron-icon>
+            <iron-image id="linkedin-icon" on-tap="contactHandler" class="navigation-image" src="../../images/linkedin-94px.png"></iron-image>
+            <iron-image id="github-icon" on-tap="contactHandler" class="navigation-image" src="../../images/github-64px.png"></iron-image>
+            <iron-icon id="email-icon" on-tap="contactHandler" class="navigation-icon" icon="icons:mail"></iron-icon>
         </div>
     </template>
     <script>
         Polymer({
-            is: 'social-media'
+            is: 'social-media',
 
 //            properties: {
 //                src: String
 //            }
+            contactHandler: function(e) {
+                if (e && e.srcElement && e.srcElement.id) {
+                    console.log(e.srcElement.id);
+                    switch (e.srcElement.id) {
+                        case 'linkedin-icon':
+                            this.navigateToLinkedIn();
+                            break;
+                        case 'github-icon':
+                            this.navigateToGitHub();
+                            break;
+                        case 'email-icon':
+                            this.navigateToSendEmail();
+                            break;
+                        default:
+                            //TODO scroll down to contact section at the bottom of the page;
+                            break;
+                    }
+                }
+            },
+
+            navigateToLinkedIn: function() {
+                console.log('to linkedin we go!');
+            },
+            navigateToGitHub: function() {
+                console.log('to github we go!');
+            },
+            navigateToSendEmail: function() {
+                console.log('to email we go!');
+            }
         });
     </script>
 </dom-module>
