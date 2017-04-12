@@ -10,12 +10,16 @@
             #text-tile-wrapper {
                 @apply(--text-tile-styles);
             }
+
+            .sentence {
+                padding-bottom: 16px;
+            }
         </style>
 
         <div id="text-tile-wrapper">
-            <div>[[sentenceOne]]</div>
+            <div class="sentence">[[sentenceOne]]</div>
             <template is="dom-if" if="[[sentenceTwo]]">
-                <div>[[sentenceTwo]]</div>
+                <div class="sentence">[[sentenceTwo]]</div>
             </template>
         </div>
     </template>
