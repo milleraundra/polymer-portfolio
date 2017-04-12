@@ -62,6 +62,11 @@
         background-color: var(--brown-1);
 
       }
+
+      #contact-wrapper {
+        padding: 16px;
+      }
+
     </style>
     <div id="main-wrapper">
       <div id="main-header">
@@ -78,8 +83,8 @@
               sentence-one="I’m a full stack web developer in Portland, Oregon."
               sentence-two="I love JavaScript very much."
       ></text-tile>
-      <div>
-        <paper-button>Yes, I'm available for hire!</paper-button>
+      <div id="contact-wrapper">
+        <paper-button raised id="contact">Yes, I'm looking for work.</paper-button>
       </div>
       <div id="main-skills">
         <template is="dom-repeat" items="[[skills]]">
