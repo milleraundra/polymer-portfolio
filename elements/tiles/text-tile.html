@@ -1,14 +1,27 @@
 <link type="import" href="../../bower_components/polymer/polymer.html">
+<link type="import" href="../../styles/styles.html">
 <dom-module id="text-tile">
     <template>
-        <style>
-
+        <style include="styles iron-flex iron-flex-alignment">
+            :host {
+                display: block;
+            }
         </style>
-        <h1>Text Tile, Hello World!</h1>
+
+        <div>
+            <div>[[sentenceOne]]</div>
+            <template is="dom-if" if="[[sentenceTwo]]">
+                <div>[[sentenceTwo]]</div>
+            </template>
+        </div>
     </template>
     <script>
         Polymer({
-            is: 'text-tile'
+            is: 'text-tile',
+            properties: {
+                sentenceOne: String,
+                sentenceTwo: String
+            }
         })
     </script>
 </dom-module>
