@@ -9,138 +9,138 @@
 
 <dom-module id="home-page">
 
-    <!-- Defines the element's style and local DOM -->
-    <template>
-        <style include="styles iron-flex iron-flex-alignment">
-            :host {
-                display: block;
-            }
+  <!-- Defines the element's style and local DOM -->
+  <template>
+    <style include="styles iron-flex iron-flex-alignment">
+      :host {
+        display: block;
+      }
 
-            #main-wrapper {
-                @apply(--layout-vertical);
-                @apply(--layout-center);
-            }
+      #main-wrapper {
+        @apply(--layout-vertical);
+        @apply(--layout-center);
+      }
 
-            #main-header {
-                padding: 16px;
-                max-width: 800px;
-                @apply(--layout-vertical);
-                @apply(--layout-center);
-            }
+      #main-header {
+        padding: 16px;
+        max-width: 800px;
+        @apply(--layout-vertical);
+        @apply(--layout-center);
+      }
 
-            #main-name {
-                font-family: 'Alegreya', 'Roboto Mono', 'Consolas', 'Menlo', monospace;
-                margin: 8px;
-                font-size: 40px;
-            }
+      #main-name {
+        font-family: 'Alegreya', 'Roboto Mono', 'Consolas', 'Menlo', monospace;
+        margin: 8px;
+        font-size: 40px;
+      }
 
-            #main-skills {
-                @apply(--layout-horizontal);
-                @apply(--layout-wrap);
-                @apply(--layout-center-justified);
+      #main-skills {
+        @apply(--layout-horizontal);
+        @apply(--layout-wrap);
+        @apply(--layout-center-justified);
 
-            }
+      }
 
-            .navigation-icon {
-                --iron-image-width: 32px;
-                padding: 8px;
-            }
+      .navigation-icon {
+        --iron-image-width: 32px;
+        padding: 8px;
+      }
 
-            #about-me-tile {
-                --text-tile-styles: {
-                    /*background-color: darkblue;*/
-                    /*color: white;*/
-                    font-size: 20px;
-                    text-align: center;
-                    padding: 16px 20px;
-                }
-            }
+      #about-me-tile {
+        --text-tile-styles: {
+          /*background-color: darkblue;*/
+          /*color: white;*/
+          font-size: 20px;
+          text-align: center;
+          padding: 16px 20px;
+        }
+      }
 
-            .tile:nth-child(2n + 1) {
-                background-color: salmon;
+      .tile:nth-child(2n + 1) {
+        background-color: salmon;
 
-            }
-        </style>
-        <div id="main-wrapper">
-            <div id="main-header">
-                <profile-image class="heading" src="../../images/aundra-miller.jpg"></profile-image>
-                <h1 id="main-name">Aundra Miller</h1>
-                <social-media></social-media>
-                <!--<p>My name is Aundra Miller. I am a full stack web developer located outside of Portland, OR.</p>-->
-                <!--<p>For me, programming perfectly combines of my love for technology and the thrill of creating and building. Technology is always changing, advancing, and improving to meet the needs of real people and make our lives as programmers easier.</p>-->
-                <!--<p>Combine that with a passion for building websites and applications that improve people's lives and delight them in the process, and it's just too good to be true.</p>-->
-                <!--<p><strong>I am looking for work!</strong></p>-->
-            </div>
-                <text-tile
-                        id="about-me-tile"
-                        sentence-one="I’m a full stack web developer in Portland, Oregon."
-                        sentence-two="I love JavaScript very much."
-                ></text-tile>
-            <div id="main-skills">
-                <template is="dom-repeat" items="[[skills]]">
-                    <experience-tile class="tile" data="[[item]]"></experience-tile>
-                    <!--<div>[[item.title]]</div>-->
-                    <!--<ul>-->
-                        <!--<template is="dom-repeat" items="[[item.list]]">-->
-                            <!--<li>[[item]]</li>-->
-                        <!--</template>-->
-                    <!--</ul>-->
-                </template>
-            </div>
+      }
+    </style>
+    <div id="main-wrapper">
+      <div id="main-header">
+        <profile-image class="heading" src="../../images/aundra-miller.jpg"></profile-image>
+        <h1 id="main-name">Aundra Miller</h1>
+        <social-media></social-media>
+        <!--<p>My name is Aundra Miller. I am a full stack web developer located outside of Portland, OR.</p>-->
+        <!--<p>For me, programming perfectly combines of my love for technology and the thrill of creating and building. Technology is always changing, advancing, and improving to meet the needs of real people and make our lives as programmers easier.</p>-->
+        <!--<p>Combine that with a passion for building websites and applications that improve people's lives and delight them in the process, and it's just too good to be true.</p>-->
+        <!--<p><strong>I am looking for work!</strong></p>-->
+      </div>
+      <text-tile
+              id="about-me-tile"
+              sentence-one="I’m a full stack web developer in Portland, Oregon."
+              sentence-two="I love JavaScript very much."
+      ></text-tile>
+      <div id="main-skills">
+        <template is="dom-repeat" items="[[skills]]">
+          <experience-tile class="tile" data="[[item]]"></experience-tile>
+          <!--<div>[[item.title]]</div>-->
+          <!--<ul>-->
+          <!--<template is="dom-repeat" items="[[item.list]]">-->
+          <!--<li>[[item]]</li>-->
+          <!--</template>-->
+          <!--</ul>-->
+        </template>
+      </div>
 
-        </div>
+    </div>
 
-    </template>
+  </template>
 
-    <!-- Creates the element's prototype and registers it -->
-    <script>
-        Polymer({
-            is: 'home-page',
-            properties: {
-                route: Object,
-                skills: {
-                    type: Array,
-                    value: [
-                        {
-                            "title": "JavaScript",
-                            "icon": "",
-                            "list": [
-                                "ES6",
-                                "RxJS",
-                                "Node.js",
-                                "Loopback",
-                                "REST APIs"
-                            ]
-                        },
-                        {
-                            "title": "Desgin",
-                            "icon": "",
-                            "list": [
-                                "HTML5",
-                                "CSS3",
-                                "SASS",
-                                "Polymer",
-                                "Material Design"
-                            ]
-                        },
-                        {
-                            "title": "PHP",
-                            "icon": "",
-                            "list": [
-                                "Drupal Modules",
-                                "Drupal Themes",
-                                "Wordpress",
-                                "Twig",
-                                "Silex"
-                            ]
-                        }
+  <!-- Creates the element's prototype and registers it -->
+  <script>
+      Polymer({
+          is: 'home-page',
+          properties: {
+              route: Object,
+              skills: {
+                  type: Array,
+                  value: [
+                      {
+                          "title": "JavaScript",
+                          "icon": "",
+                          "list": [
+                              "ES6",
+                              "RxJS",
+                              "Node.js",
+                              "Loopback",
+                              "REST APIs"
+                          ]
+                      },
+                      {
+                          "title": "Desgin",
+                          "icon": "",
+                          "list": [
+                              "HTML5",
+                              "CSS3",
+                              "SASS",
+                              "Polymer",
+                              "Material Design"
+                          ]
+                      },
+                      {
+                          "title": "PHP",
+                          "icon": "",
+                          "list": [
+                              "Drupal Modules",
+                              "Drupal Themes",
+                              "Wordpress",
+                              "Twig",
+                              "Silex"
+                          ]
+                      }
 
-                    ]
-                }
-            }
+                  ]
+              }
+          }
 
 //
-        });
-    </script>
+      });
+  </script>
 
 </dom-module>
