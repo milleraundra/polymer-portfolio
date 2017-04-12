@@ -6,9 +6,13 @@
             :host {
                 display: block;
             }
+
+            #text-tile-wrapper {
+                @apply(--text-tile-styles);
+            }
         </style>
 
-        <div>
+        <div id="text-tile-wrapper">
             <div>[[sentenceOne]]</div>
             <template is="dom-if" if="[[sentenceTwo]]">
                 <div>[[sentenceTwo]]</div>
