@@ -1,5 +1,6 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
 <link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
 <link rel="import" href="../elements/profile-image/profile-image.html">
 <link rel="import" href="../elements/social-media/social-media.html">
 <link rel="import" href="../elements/tiles/experience-tile.html">
@@ -48,16 +49,17 @@
 
       #about-me-tile {
         --text-tile-styles: {
-          /*background-color: darkblue;*/
-          /*color: white;*/
+          background-color: var(--purple-2);
+          /*color: var(--white-1);*/
           font-size: 20px;
+          font-weight: 300;
           text-align: center;
           padding: 16px 20px;
         }
       }
 
       .tile:nth-child(2n + 1) {
-        background-color: salmon;
+        background-color: var(--brown-1);
 
       }
     </style>
@@ -76,6 +78,9 @@
               sentence-one="I’m a full stack web developer in Portland, Oregon."
               sentence-two="I love JavaScript very much."
       ></text-tile>
+      <div>
+        <paper-button>Yes, I'm available for hire!</paper-button>
+      </div>
       <div id="main-skills">
         <template is="dom-repeat" items="[[skills]]">
           <experience-tile class="tile" data="[[item]]"></experience-tile>
