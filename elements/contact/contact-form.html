@@ -48,17 +48,22 @@
     </style>
       <div id="contact-form-input-wrapper">
         <paper-input class="input-field" label="Full Name"></paper-input>
-        <gold-email-input class="input-field" label="Email"></gold-email-input>
+        <gold-email-input auto-validate class="input-field" label="Email"></gold-email-input>
         <paper-input class="input-field" label="Subject"></paper-input>
-        <paper-textarea class="input-field" label="Message"></paper-textarea>
-        <paper-button id="submit">Submit</paper-button>
+        <paper-textarea rows="4" class="input-field" label="Message"></paper-textarea>
+        <paper-button id="submit" on-tap="validateFormInput">Submit</paper-button>
       </div>
   </template>
 
 
   <script>
       Polymer({
-          is: 'contact-form'
+          is: 'contact-form',
+
+          validateFormInput: function() {
+              //TODO look into using iron-form to prevent checking individual form inputs.
+              console.log('check!');
+          }
       });
   </script>
 </dom-module>
