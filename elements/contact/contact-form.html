@@ -12,6 +12,13 @@
         display: block;
       }
 
+      #contact-form-input-wrapper {
+        width: 100%;
+        max-width: 500px;
+        @apply(--layout-vertical);
+        /*@apply(--layout-justified-center);*/
+      }
+
       .input-field {
         --paper-input-container-label: {
           color: black;
@@ -34,10 +41,12 @@
         background-color: var(--blue-1);
         color: var(--white-1);
         font-weight: 300;
+        max-width: 200px;
+        @apply(--layout-self-end);
       }
 
     </style>
-      <div>
+      <div id="contact-form-input-wrapper">
         <paper-input class="input-field" label="Full Name"></paper-input>
         <gold-email-input class="input-field" label="Email"></gold-email-input>
         <paper-input class="input-field" label="Subject"></paper-input>
