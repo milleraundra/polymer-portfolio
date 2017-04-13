@@ -12,12 +12,37 @@
         display: block;
       }
 
+      .input-field {
+        --paper-input-container-label: {
+          color: black;
+        };
+        --paper-input-container-label-floating: {
+          color: var(--blue-1);
+        };
+        --paper-input-container-label-focus: {
+          color: var(--blue-1);
+        };
+        --paper-input-container-underline: {
+          border-color: black;
+        };
+        --paper-input-container-underline-focus: {
+          border-color: black;
+        }
+      }
+
+      #submit {
+        background-color: var(--blue-1);
+        color: var(--white-1);
+        font-weight: 300;
+      }
+
     </style>
       <div>
-        <paper-input label="Full Name"></paper-input>
-        <gold-email-input label="Email"></gold-email-input>
-        <paper-input label="Subject"></paper-input>
-        <paper-textarea label="Message"></paper-textarea>
+        <paper-input class="input-field" label="Full Name"></paper-input>
+        <gold-email-input class="input-field" label="Email"></gold-email-input>
+        <paper-input class="input-field" label="Subject"></paper-input>
+        <paper-textarea class="input-field" label="Message"></paper-textarea>
+        <paper-button id="submit">Submit</paper-button>
       </div>
   </template>
 
