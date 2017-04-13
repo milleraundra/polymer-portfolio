@@ -50,6 +50,10 @@
         padding: 8px;
       }
 
+      #about-me-wrapper {
+        padding: 32px;
+      }
+
       #about-me-tile {
         --text-tile-styles: {
           /*background-color: var(--purple-2);*/
@@ -111,11 +115,13 @@
         <social-media></social-media>
       </div>
       <!--About Me-->
-      <text-tile
-              id="about-me-tile"
-              sentence-one="I’m a full stack web developer in Portland, Oregon."
-              sentence-two="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus ultricies pretium. Donec quis turpis varius, consectetur orci id, egestas magna. Donec eget laoreet risus. "
-      ></text-tile>
+      <div id="about-me-wrapper">
+        <text-tile
+                id="about-me-tile"
+                sentence-one="I’m a full stack web developer in Portland, Oregon."
+                sentence-two="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus ultricies pretium. Donec quis turpis varius, consectetur orci id, egestas magna. Donec eget laoreet risus. "
+        ></text-tile>
+      </div>
       <!--Contact Button-->
       <div id="contact-button-wrapper">
         <paper-button raised id="contact-button">Yes, I'm looking for work.</paper-button>
