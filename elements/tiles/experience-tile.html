@@ -1,62 +1,71 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 <link rel="import" href="../../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+<link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
 
 <dom-module id="experience-tile">
 
-    <!-- Defines the element's style and local DOM -->
-    <template>
-        <style include="iron-flex iron-flex-alignment">
-            :host {
-                display: block;
-            }
+  <!-- Defines the element's style and local DOM -->
+  <template>
+    <style include="iron-flex iron-flex-alignment">
+      :host {
+        display: block;
+        text-align: center;
+        max-width: 300px;
+      }
 
-            #tile-container {
-                /*padding: 16px;*/
-                min-width: 300px;
-                /*@apply(--layout-horizontal);*/
-                /*@apply(--layout-center);*/
-            }
+      #tile-container {
+        /*padding: 16px;*/
+        /*min-width: 300px;*/
+        @apply(--layout-horizontal);
+        @apply(--layout-wrap);
+        @apply(--layout-center);
+      }
 
-            #tile-list {
-                @apply(--layout-horizontal);
-                @apply(--layout-wrap);
-                @apply(--layout-center);
-                /*max-width: 600px;*/
-                /*list-style-type: none;*/
-                /*columns: 2;*/
-                /*-webkit-columns: 2;*/
-                /*-moz-columns: 2;*/
-            }
+      #tile-title {
+        font-family: Alegreya, Roboto, Noto, sans-serif;
+      }
 
-            .tile-item {
-                padding: 4px;
-            }
+      #tile-list {
+        @apply(--layout-horizontal);
+        @apply(--layout-wrap);
+        @apply(--layout-center);
+        /*max-width: 600px;*/
+        /*list-style-type: none;*/
+        /*columns: 2;*/
+        /*-webkit-columns: 2;*/
+        /*-moz-columns: 2;*/
+      }
 
-        </style>
-        <div id="tile-container">
-            <div>
-                <h1>[[data.title]]</h1>
-                <div id="tile-list">
-                    <template is="dom-repeat" items="[[data.list]]">
-                        <div class="tile-item">[[item]]</div>-
-                    </template>
-                </div>
-                <!--<ul id="tile-list">-->
-                    <!--<template is="dom-repeat" items="[[data.list]]">-->
-                        <!--<li>[[item]]</li>-->
-                    <!--</template>-->
-                <!--</ul>-->
-            </div>
+      .tile-item {
+        padding: 4px;
+      }
+
+    </style>
+    <div id="tile-container">
+      <div>
+        <h2 id="tile-title">[[data.title]]</h2>
+        <div id="tile-list">
+          <template is="dom-repeat" items="[[data.list]]">
+            <div class="tile-item">[[item]]</div>
+            -
+          </template>
         </div>
-    </template>
-    <script>
-        Polymer({
-            is: 'experience-tile',
-            properties: {
-                data: {
-                    type: Object
-                }
-            }
-        })
-    </script>
+        <!--<ul id="tile-list">-->
+        <!--<template is="dom-repeat" items="[[data.list]]">-->
+        <!--<li>[[item]]</li>-->
+        <!--</template>-->
+        <!--</ul>-->
+      </div>
+    </div>
+  </template>
+  <script>
+      Polymer({
+          is: 'experience-tile',
+          properties: {
+              data: {
+                  type: Object
+              }
+          }
+      })
+  </script>
 </dom-module>
