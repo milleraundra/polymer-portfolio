@@ -44,12 +44,14 @@
     <div id="tile-container">
       <div>
         <h2 id="tile-title">[[data.title]]</h2>
-        <div id="tile-list">
-          <template is="dom-repeat" items="[[data.list]]">
-            <div class="tile-item">[[item]]</div>
-            -
-          </template>
-        </div>
+        <div id="sentence-one"></div>
+        <div id="sentence-two"></div>
+        <!--<div id="tile-list">-->
+          <!--<template is="dom-repeat" items="[[data.list]]">-->
+            <!--<div class="tile-item">[[item]]</div>-->
+            <!-- - -->
+          <!--</template>-->
+        <!--</div>-->
         <!--<ul id="tile-list">-->
         <!--<template is="dom-repeat" items="[[data.list]]">-->
         <!--<li>[[item]]</li>-->
@@ -62,9 +64,23 @@
       Polymer({
           is: 'experience-tile',
           properties: {
-              data: {
-                  type: Object
+              data: Object,
+              sentenceOne: {
+                  type: String,
+                  observer: 'addFirstSentence'
+              },
+              sentenceTwo: {
+                  type: String,
+                  observer: 'addSecondSentence'
               }
+          },
+
+          addFirstSentence: function(sentence) {
+              this.$['sentence-one'].innerHTML = sentence;
+          },
+
+          addSecondSentence: function(sentence) {
+              this.$['sentence-two'].innerHTML = sentence;
           }
       })
   </script>

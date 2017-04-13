@@ -106,7 +106,7 @@
       </div>
       <div id="main-skills">
         <template is="dom-repeat" items="[[skills]]">
-          <experience-tile class="tile" data="[[item]]"></experience-tile>
+          <experience-tile class="tile" data="[[item]]" sentence-one="[[item.sentenceOne]]" sentence-two="[[item.sentenceTwo]]"></experience-tile>
           <!--<div>[[item.title]]</div>-->
           <!--<ul>-->
           <!--<template is="dom-repeat" items="[[item.list]]">-->
@@ -138,7 +138,9 @@
                               "Node.js",
                               "Loopback",
                               "REST APIs"
-                          ]
+                          ],
+                          "sentenceOne": "I am skilled at working with <strong>Node.js</strong> and have written <strong>REST APIs</strong> using <strong>Loopback</strong>, a Node framework.",
+                          "sentenceTwo": "I have also used ES5 and <strong>ES6</strong>, and have worked with <strong>Angular 2</strong>, <strong>Ember</strong>, <strong>RxJS</strong>, <strong>Mocha</strong>, and <strong>Chai</strong>."
                       },
                       {
                           "title": "Desgin",
