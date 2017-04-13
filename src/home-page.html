@@ -66,12 +66,12 @@
         padding: 16px;
       }
 
-      /*.tile:nth-child(2n + 1) {*/
-        /*background-color: var(--brown-1);*/
+      .section-header {
+        font-family: 'Alegreya', 'Roboto Mono', 'Consolas', 'Menlo', monospace;
+        text-align: center;
+      }
 
-      /*}*/
-
-      #contact-wrapper {
+      #contact-button-wrapper {
         width: calc(100% - 32px);
         @apply(--layout-horizontal);
         @apply(--layout-center-justified);
@@ -80,38 +80,51 @@
         padding: 16px;
       }
 
-      #contact {
+      #contact-button {
         background-color: var(--blue-1);
         color: var(--white-1);
         font-weight: 300;
         padding: 11px 24px;
       }
 
+      #contact-section {
+        background-color: var(--purple-2);
+        min-width: calc(100% - 32px);
+        padding: 16px;
+        /*text-align: center;*/
+
+      }
+
     </style>
     <div id="main-wrapper">
+      <!--Header-->
       <div id="main-header">
         <profile-image class="heading" src="../../images/aundra-miller.jpg"></profile-image>
         <h1 id="main-name">Aundra Miller</h1>
         <social-media></social-media>
-        <!--<p>My name is Aundra Miller. I am a full stack web developer located outside of Portland, OR.</p>-->
-        <!--<p>For me, programming perfectly combines of my love for technology and the thrill of creating and building. Technology is always changing, advancing, and improving to meet the needs of real people and make our lives as programmers easier.</p>-->
-        <!--<p>Combine that with a passion for building websites and applications that improve people's lives and delight them in the process, and it's just too good to be true.</p>-->
-        <!--<p><strong>I am looking for work!</strong></p>-->
       </div>
+      <!--About Me-->
       <text-tile
               id="about-me-tile"
               sentence-one="I’m a full stack web developer in Portland, Oregon."
-              sentence-two="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus ultricies pretium. Donec quis turpis varius, consectetur orci id, egestas magna. Donec eget laoreet risus. Mauris non mi eleifend, eleifend mauris vitae, iaculis ligula. Nam auctor euismod turpis sit amet accumsan. Duis magna sapien, vulputate at consectetur in, pretium sed est."
+              sentence-two="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus ultricies pretium. Donec quis turpis varius, consectetur orci id, egestas magna. Donec eget laoreet risus. "
       ></text-tile>
-      <div id="contact-wrapper">
-        <paper-button raised id="contact">Yes, I'm looking for work.</paper-button>
+      <!--Contact Button-->
+      <div id="contact-button-wrapper">
+        <paper-button raised id="contact-button">Yes, I'm looking for work.</paper-button>
       </div>
+      <!--Skills Summary-->
       <div id="main-skills">
         <template is="dom-repeat" items="[[skills]]">
-          <experience-tile class="tile" data="[[item]]" sentence-one="[[item.sentenceOne]]" sentence-two="[[item.sentenceTwo]]"></experience-tile>
+          <experience-tile class="tile" data="[[item]]" sentence-one="[[item.sentenceOne]]"
+                           sentence-two="[[item.sentenceTwo]]"></experience-tile>
         </template>
       </div>
-      <contact-form></contact-form>
+      <!--Contact Section-->
+      <div id="contact-section">
+        <h2 class="section-header">Contact Me</h2>
+        <contact-form></contact-form>
+      </div>
     </div>
 
   </template>
