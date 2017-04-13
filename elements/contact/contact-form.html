@@ -1,5 +1,8 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 <link rel="import" href="../../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+<link rel="import" href="../../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../../bower_components/paper-input/paper-textarea.html">
+<link rel="import" href="../../bower_components/gold-email-input/gold-email-input.html">
 <link rel="import" href="../../styles/styles.html">
 
 <dom-module id="contact-form">
@@ -10,8 +13,13 @@
       }
 
     </style>
+      <div>
+        <paper-input label="Full Name"></paper-input>
+        <gold-email-input label="Email"></gold-email-input>
+        <paper-input label="Subject"></paper-input>
+        <paper-textarea label="Message"></paper-textarea>
+      </div>
   </template>
-
 
 
   <script>

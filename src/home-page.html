@@ -5,6 +5,7 @@
 <link rel="import" href="../elements/social-media/social-media.html">
 <link rel="import" href="../elements/tiles/experience-tile.html">
 <link rel="import" href="../elements/tiles/text-tile.html">
+<link rel="import" href="../elements/contact/contact-form.html">
 <link rel="import" href="../styles/styles.html">
 <link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
 
@@ -108,15 +109,9 @@
       <div id="main-skills">
         <template is="dom-repeat" items="[[skills]]">
           <experience-tile class="tile" data="[[item]]" sentence-one="[[item.sentenceOne]]" sentence-two="[[item.sentenceTwo]]"></experience-tile>
-          <!--<div>[[item.title]]</div>-->
-          <!--<ul>-->
-          <!--<template is="dom-repeat" items="[[item.list]]">-->
-          <!--<li>[[item]]</li>-->
-          <!--</template>-->
-          <!--</ul>-->
         </template>
       </div>
-
+      <contact-form></contact-form>
     </div>
 
   </template>
