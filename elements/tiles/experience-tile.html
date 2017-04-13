@@ -12,28 +12,39 @@
 
             #tile-container {
                 /*padding: 16px;*/
-                min-width: 300px;
+                /*min-width: 300px;*/
                 @apply(--layout-vertical);
                 @apply(--layout-center);
             }
 
             #tile-list {
+                @apply(--layout-horizontal);
+                @apply(--layout-center);
                 /*max-width: 600px;*/
-                list-style-type: none;
+                /*list-style-type: none;*/
                 /*columns: 2;*/
                 /*-webkit-columns: 2;*/
                 /*-moz-columns: 2;*/
+            }
+
+            .tile-item {
+                padding: 4px;
             }
 
         </style>
         <div id="tile-container">
             <div>
                 <h1>[[data.title]]</h1>
-                <ul id="tile-list">
+                <div id="tile-list">|
                     <template is="dom-repeat" items="[[data.list]]">
-                        <li>[[item]]</li>
+                        <div class="tile-item">[[item]]</div>|
                     </template>
-                </ul>
+                </div>
+                <!--<ul id="tile-list">-->
+                    <!--<template is="dom-repeat" items="[[data.list]]">-->
+                        <!--<li>[[item]]</li>-->
+                    <!--</template>-->
+                <!--</ul>-->
             </div>
         </div>
     </template>
