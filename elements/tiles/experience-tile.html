@@ -3,8 +3,6 @@
 <link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
 
 <dom-module id="experience-tile">
-
-  <!-- Defines the element's style and local DOM -->
   <template>
     <style include="iron-flex iron-flex-alignment">
       :host {
@@ -14,8 +12,6 @@
       }
 
       #tile-container {
-        /*padding: 16px;*/
-        /*min-width: 300px;*/
         @apply(--layout-horizontal);
         @apply(--layout-wrap);
         @apply(--layout-center);
@@ -29,11 +25,6 @@
         @apply(--layout-horizontal);
         @apply(--layout-wrap);
         @apply(--layout-center);
-        /*max-width: 600px;*/
-        /*list-style-type: none;*/
-        /*columns: 2;*/
-        /*-webkit-columns: 2;*/
-        /*-moz-columns: 2;*/
       }
 
       .tile-item {
@@ -46,17 +37,6 @@
         <h2 id="tile-title">[[data.title]]</h2>
         <div id="sentence-one"></div>
         <div id="sentence-two"></div>
-        <!--<div id="tile-list">-->
-          <!--<template is="dom-repeat" items="[[data.list]]">-->
-            <!--<div class="tile-item">[[item]]</div>-->
-            <!-- - -->
-          <!--</template>-->
-        <!--</div>-->
-        <!--<ul id="tile-list">-->
-        <!--<template is="dom-repeat" items="[[data.list]]">-->
-        <!--<li>[[item]]</li>-->
-        <!--</template>-->
-        <!--</ul>-->
       </div>
     </div>
   </template>
