@@ -27,6 +27,7 @@
         background-color: var(--purple-2);
         width: calc(100% - 32px);
         padding: 16px;
+        padding-top: 32px;
         @apply(--layout-vertical);
         @apply(--layout-center);
       }
@@ -81,13 +82,15 @@
       #contact-button {
         background-color: var(--blue-1);
         color: var(--white-1);
-        font-weight: 300;
+        /*font-weight: 300;*/
         padding: 11px 24px;
       }
 
       #contact-section {
         background-color: var(--purple-2);
-        min-width: calc(100% - 32px);
+        min-width: 100%;
+        padding-bottom: 32px;
+        /*min-width: calc(100% - 32px);*/
         /*padding: 16px;*/
         /*text-align: center;*/
       }
@@ -184,6 +187,18 @@
 
                   ]
               }
+          },
+
+          listeners: {
+              'open-linkedin': 'navigateToLinkedIn',
+              'open-github': 'navigateToGitHub'
+          },
+
+          navigateToLinkedIn: function () {
+              window.open('https://www.linkedin.com/in/aundramiller', '_blank');
+          },
+          navigateToGitHub: function () {
+              window.open('https://www.github.com/milleraundra', '_blank');
           }
 
 //

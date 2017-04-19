@@ -52,6 +52,10 @@
         padding-right: 8px;
       }
 
+      .contact-option {
+        cursor: pointer;
+      }
+
       #contact-resource-wrapper {
         text-align: left;
       }
@@ -66,14 +70,14 @@
       <!--<paper-textarea rows="4" class="input-field" label="Message"></paper-textarea>-->
       <!--<paper-button id="submit" on-tap="validateFormInput">Submit</paper-button>-->
 
-      <p>I'm available for hire! Send me an email or a message over LinkedIn. I look forward to hearing from you.</p>
+      <p>I'm available for hire! Send me an email or a LinkedIn message. I look forward to hearing from you.</p>
       <div id="contact-resource-wrapper">
-        <p>
+        <p class="contact-option">
           <iron-icon id="email-icon" class="email-icon"
                      icon="icons:mail"></iron-icon>
           miller.aundra@gmail.com
         </p>
-        <p>
+        <p class="contact-option" on-tap="openLinkedIn">
           <iron-image id="linkedin-icon" class="linkedin-image"
                       src="../../images/linkedin-94px.png"></iron-image>
           linkedin/in/aundramiller
@@ -88,6 +92,10 @@
   <script>
       Polymer({
           is: 'contact-form',
+
+          openLinkedIn: function() {
+              this.fire('open-linkedin');
+          },
 
           validateFormInput: function () {
               //TODO look into using iron-form to prevent checking individual form inputs.
