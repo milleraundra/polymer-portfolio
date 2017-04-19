@@ -140,7 +140,6 @@
 
   </template>
 
-  <!-- Creates the element's prototype and registers it -->
   <script>
       Polymer({
           is: 'home-page',
@@ -193,32 +192,18 @@
           listeners: {
               'open-linkedin': 'navigateToLinkedIn',
               'open-github': 'navigateToGitHub',
-              'copy-email': 'copyEmailAddress',
               'scroll-to-contact': 'scrollToContactSection'
           },
 
           navigateToLinkedIn: function () {
               window.open('https://www.linkedin.com/in/aundramiller', '_blank');
           },
+
           navigateToGitHub: function () {
               window.open('https://www.github.com/milleraundra', '_blank');
           },
-          copyEmailAddress: function (e, id) {
-//                  var clipboard = new Clipboard(id);
-//                  console.log(clipboard);
-//                  clipboard.on('success', function(e) {
-//                      console.log('succcess!', e);
-//                  });
-//                  clipboard.on('error', function() {
-//                      console.log('error!', e);
-//                  });
-
-//                  window.prompt("Copy to clipboard: Ctrl+C, Enter", 'miller.aundra@gmail.com');
-//              window.open('mailto:miller.aundra@gmail.com');
-          },
 
           scrollToContactSection: function() {
-//              console.log(this.$['contact-section']);
               window.scroll({
                   top: 1600,
                   left: 0,
