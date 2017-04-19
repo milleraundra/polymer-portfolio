@@ -8,6 +8,7 @@
 <link rel="import" href="../elements/contact/contact-form.html">
 <link rel="import" href="../styles/styles.html">
 <link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
+<script src="../bower_components/smoothscroll/dist/smoothscroll.js"></script>
 
 <dom-module id="home-page">
 
@@ -217,7 +218,10 @@
           },
 
           scrollToContactSection: function() {
-              this.$['contact-section'].scrollIntoView({
+//              console.log(this.$['contact-section']);
+              window.scroll({
+                  top: 1600,
+                  left: 0,
                   behavior: 'smooth'
               });
 
