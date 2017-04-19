@@ -1,5 +1,6 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 <link rel="import" href="../../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+<link rel="import" href="../../bower_components/iron-icons/iron-icons.html">
 <link rel="import" href="../../bower_components/paper-input/paper-input.html">
 <link rel="import" href="../../bower_components/paper-input/paper-textarea.html">
 <link rel="import" href="../../bower_components/gold-email-input/gold-email-input.html">
@@ -15,7 +16,9 @@
       #contact-form-input-wrapper {
         width: 100%;
         max-width: 500px;
+        text-align: center; /* TODO remove when form is restored */
         @apply(--layout-vertical);
+        @apply(--layout-center);
       }
 
       .input-field {
@@ -44,14 +47,41 @@
         @apply(--layout-self-end);
       }
 
+      .linkedin-image, .email-icon {
+        --iron-image-width: 24px;
+        padding-right: 8px;
+      }
+
+      #contact-resource-wrapper {
+        text-align: left;
+      }
+
+
     </style>
-      <div id="contact-form-input-wrapper">
-        <paper-input class="input-field" label="Full Name"></paper-input>
-        <gold-email-input auto-validate class="input-field" label="Email"></gold-email-input>
-        <paper-input class="input-field" label="Subject"></paper-input>
-        <paper-textarea rows="4" class="input-field" label="Message"></paper-textarea>
-        <paper-button id="submit" on-tap="validateFormInput">Submit</paper-button>
+    <div id="contact-form-input-wrapper">
+      <!--TODO complete contact API so visitors can use the form-->
+      <!--<paper-input class="input-field" label="Full Name"></paper-input>-->
+      <!--<gold-email-input auto-validate class="input-field" label="Email"></gold-email-input>-->
+      <!--<paper-input class="input-field" label="Subject"></paper-input>-->
+      <!--<paper-textarea rows="4" class="input-field" label="Message"></paper-textarea>-->
+      <!--<paper-button id="submit" on-tap="validateFormInput">Submit</paper-button>-->
+
+      <p>I'm available for hire! Send me an email or a message over LinkedIn. I look forward to hearing from you.</p>
+      <div id="contact-resource-wrapper">
+        <p>
+          <iron-icon id="email-icon" class="email-icon"
+                     icon="icons:mail"></iron-icon>
+          miller.aundra@gmail.com
+        </p>
+        <p>
+          <iron-image id="linkedin-icon" class="linkedin-image"
+                      src="../../images/linkedin-94px.png"></iron-image>
+          linkedin/in/aundramiller
+        </p>
+
       </div>
+
+    </div>
   </template>
 
 
@@ -59,7 +89,7 @@
       Polymer({
           is: 'contact-form',
 
-          validateFormInput: function() {
+          validateFormInput: function () {
               //TODO look into using iron-form to prevent checking individual form inputs.
               console.log('check!');
           }

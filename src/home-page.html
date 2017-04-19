@@ -88,15 +88,16 @@
       #contact-section {
         background-color: var(--purple-2);
         min-width: calc(100% - 32px);
-        padding: 16px;
-        text-align: center;
+        /*padding: 16px;*/
+        /*text-align: center;*/
       }
 
       #contact-form {
         @apply(--layout-vertical);
         @apply(--layout-center);
-        min-width: calc(100% - 32px);
-        padding: 16px;
+        min-width: 100%;
+        /*min-width: calc(100% - 32px);*/
+        /*padding: 16px;*/
 
       }
 
@@ -129,9 +130,7 @@
       <!--Contact Section-->
       <div id="contact-section">
         <h2 class="section-header">Contact Me</h2>
-        <p>miller.aundra@gmail.com</p>
-        <p>linkedin/in/aundramiller</p>
-        <!--<contact-form id="contact-form"></contact-form>-->
+        <contact-form id="contact-form"></contact-form>
       </div>
     </div>
 
