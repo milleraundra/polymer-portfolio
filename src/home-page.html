@@ -192,7 +192,8 @@
           listeners: {
               'open-linkedin': 'navigateToLinkedIn',
               'open-github': 'navigateToGitHub',
-              'copy-email': 'copyEmailAddress'
+              'copy-email': 'copyEmailAddress',
+              'scroll-to-contact': 'scrollToContactSection'
           },
 
           navigateToLinkedIn: function () {
@@ -213,6 +214,13 @@
 
 //                  window.prompt("Copy to clipboard: Ctrl+C, Enter", 'miller.aundra@gmail.com');
 //              window.open('mailto:miller.aundra@gmail.com');
+          },
+
+          scrollToContactSection: function() {
+              this.$['contact-section'].scrollIntoView({
+                  behavior: 'smooth'
+              });
+
           }
 
 //
