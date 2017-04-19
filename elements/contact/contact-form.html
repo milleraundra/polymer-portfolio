@@ -5,6 +5,8 @@
 <link rel="import" href="../../bower_components/paper-input/paper-textarea.html">
 <link rel="import" href="../../bower_components/gold-email-input/gold-email-input.html">
 <link rel="import" href="../../styles/styles.html">
+<script src="../../bower_components/clipboard/dist/clipboard.min.js"></script>
+
 
 <dom-module id="contact-form">
   <template>
@@ -78,7 +80,12 @@
           <iron-icon id="email-icon" class="email-icon"
                      icon="icons:mail"></iron-icon>
           miller.aundra@gmail.com
-          <iron-icon icon="icons:content-copy" on-tap="copyEmail"></iron-icon>
+          <iron-icon
+                  id="copy-email-icon"
+                  icon="icons:content-copy"
+                  data-clipboard-text="miller.aundra@gmail.com"
+                  data-clipboard-action="copy"
+                  on-tap="copyEmail"></iron-icon>
         </p>
         <p class="contact-option" on-tap="openLinkedIn">
           <iron-image id="linkedin-icon" class="linkedin-image"
@@ -100,8 +107,22 @@
               this.fire('open-linkedin');
           },
 
-          copyEmail: function() {
-              this.fire('copy-email');
+          prepareClipboard: function() {
+              var element = this.$['copy-email-icon'];
+              return new Clipboard(element);
+          },
+
+          copyEmail: function(e) {
+//              this.fire('copy-email', '#copy-email-icon');
+//              console.log("running copyEmail!")
+              var clipboard = this.prepareClipboard();
+              clipboard.on('success', function(e) {
+                  console.log('success!');
+              });
+              clipboard.on('error', function(e) {
+                  console.log('ERROR!');
+              });
+              clipboard.destroy();
           },
 
           validateFormInput: function () {
