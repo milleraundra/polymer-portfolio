@@ -84,8 +84,7 @@
                   id="copy-email-icon"
                   icon="icons:content-copy"
                   data-clipboard-text="miller.aundra@gmail.com"
-                  data-clipboard-action="copy"
-                  on-tap="copyEmail"></iron-icon>
+                  data-clipboard-action="copy"></iron-icon>
         </p>
         <p class="contact-option" on-tap="openLinkedIn">
           <iron-image id="linkedin-icon" class="linkedin-image"
@@ -103,27 +102,41 @@
       Polymer({
           is: 'contact-form',
 
-          openLinkedIn: function() {
+          openLinkedIn: function () {
               this.fire('open-linkedin');
           },
 
-          prepareClipboard: function() {
-              var element = this.$['copy-email-icon'];
-              return new Clipboard(element);
+          attached: function () {
+              this.debounce('prepareClilpboard', function () {
+                  var element = this.$['copy-email-icon'];
+                  var clipboard = new Clipboard(element);
+                  clipboard.on('success', function (e) {
+                      console.log('success!');
+                  });
+                  clipboard.on('error', function (e) {
+                      console.log('ERROR!');
+                  });
+
+              }, 300)
           },
 
-          copyEmail: function(e) {
-//              this.fire('copy-email', '#copy-email-icon');
-//              console.log("running copyEmail!")
-              var clipboard = this.prepareClipboard();
-              clipboard.on('success', function(e) {
-                  console.log('success!');
-              });
-              clipboard.on('error', function(e) {
-                  console.log('ERROR!');
-              });
-              clipboard.destroy();
-          },
+//          prepareClipboard: function() {
+//              var element = this.$['copy-email-icon'];
+//              return new Clipboard(element);
+//          },
+//
+//          copyEmail: function(e) {
+////              this.fire('copy-email', '#copy-email-icon');
+////              console.log("running copyEmail!")
+//              var clipboard = this.prepareClipboard();
+//              clipboard.on('success', function(e) {
+//                  console.log('success!');
+//              });
+//              clipboard.on('error', function(e) {
+//                  console.log('ERROR!');
+//              });
+//              clipboard.destroy();
+//          },
 
           validateFormInput: function () {
               //TODO look into using iron-form to prevent checking individual form inputs.
