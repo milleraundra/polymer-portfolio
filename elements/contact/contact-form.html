@@ -65,6 +65,10 @@
         text-align: left;
       }
 
+      #copy-email-icon {
+        padding: 8px;
+      }
+
 
     </style>
     <div id="contact-form-input-wrapper">
@@ -125,24 +129,6 @@
                  });
               }, 300)
           },
-
-//          prepareClipboard: function() {
-//              var element = this.$['copy-email-icon'];
-//              return new Clipboard(element);
-//          },
-//
-//          copyEmail: function(e) {
-////              this.fire('copy-email', '#copy-email-icon');
-////              console.log("running copyEmail!")
-//              var clipboard = this.prepareClipboard();
-//              clipboard.on('success', function(e) {
-//                  console.log('success!');
-//              });
-//              clipboard.on('error', function(e) {
-//                  console.log('ERROR!');
-//              });
-//              clipboard.destroy();
-//          },
 
           validateFormInput: function () {
               //TODO look into using iron-form to prevent checking individual form inputs.
