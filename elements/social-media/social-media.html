@@ -5,62 +5,66 @@
 <link rel="import" href="../../styles/styles.html">
 
 <dom-module id="social-media">
-    <template>
-        <style include="styles iron-flex iron-flex-alignment">
-            :host {
-                display: block;
-            }
+  <template>
+    <style include="styles iron-flex iron-flex-alignment">
+      :host {
+        display: block;
+      }
 
-            .navigation-image, .navigation-icon {
-                --iron-image-width: 24px;
-                padding: 8px 16px;
-            }
+      .navigation-image, .navigation-icon {
+        --iron-image-width: 24px;
+        padding: 8px 16px;
+        cursor: pointer;
+      }
 
-            #github-icon {
-                --iron-image-width: 20px;
-            }
+      #github-icon {
+        --iron-image-width: 20px;
+      }
 
 
-        </style>
-        <div id="social-media-wrapper" class="layout horizontal">
-            <iron-image id="linkedin-icon" name="linkedin-icon" on-tap="contactHandler" class="navigation-image" src="../../images/linkedin-94px.png"></iron-image>
-            <iron-image id="github-icon" name="github-icon" on-tap="contactHandler" class="navigation-image" src="../../images/github-64px.png"></iron-image>
-            <iron-icon id="email-icon" name="email-icon" on-tap="contactHandler" class="navigation-icon" icon="icons:mail"></iron-icon>
-        </div>
-    </template>
-    <script>
-        Polymer({
-            is: 'social-media',
+    </style>
+    <div id="social-media-wrapper" class="layout horizontal">
+      <iron-image id="linkedin-icon" name="linkedin-icon" on-tap="contactHandler" class="navigation-image"
+                  src="../../images/linkedin-94px.png"></iron-image>
+      <iron-image id="github-icon" name="github-icon" on-tap="contactHandler" class="navigation-image"
+                  src="../../images/github-64px.png"></iron-image>
+      <iron-icon id="email-icon" name="email-icon" on-tap="contactHandler" class="navigation-icon"
+                 icon="icons:mail"></iron-icon>
+    </div>
+  </template>
+  <script>
+      Polymer({
+          is: 'social-media',
 
-            contactHandler: function(e) {
-                if (e && e.srcElement && e.srcElement.id) {
-                    var id = (e.srcElement.id == "img") ? e.srcElement.parentNode.id : e.srcElement.id; //Safari hack. click event falls through to img inside iron-img.
-                    switch (id) {
-                        case 'linkedin-icon':
-                            this.navigateToLinkedIn();
-                            break;
-                        case 'github-icon':
-                            this.navigateToGitHub();
-                            break;
-                        default:
-                            //TODO scroll down to contact section at the bottom of the page;
-                            this.scrollDownToContact();
-                            break;
-                    }
-                }
-            },
+          contactHandler: function (e) {
+              if (e && e.srcElement && e.srcElement.id) {
+                  var id = (e.srcElement.id == "img") ? e.srcElement.parentNode.id : e.srcElement.id; //Safari hack. click event falls through to img inside iron-img.
+                  switch (id) {
+                      case 'linkedin-icon':
+                          this.navigateToLinkedIn();
+                          break;
+                      case 'github-icon':
+                          this.navigateToGitHub();
+                          break;
+                      default:
+                          //TODO scroll down to contact section at the bottom of the page;
+                          this.scrollDownToContact();
+                          break;
+                  }
+              }
+          },
 
-            navigateToLinkedIn: function() {
-                window.open('https://www.linkedin.com/in/aundramiller', '_blank');
-            },
-            navigateToGitHub: function() {
-                window.open('https://www.github.com/milleraundra', '_blank');
-            },
-            scrollDownToContact: function() {
-                this.fire('scroll-to-contact');
+          navigateToLinkedIn: function () {
+              window.open('https://www.linkedin.com/in/aundramiller', '_blank');
+          },
+          navigateToGitHub: function () {
+              window.open('https://www.github.com/milleraundra', '_blank');
+          },
+          scrollDownToContact: function () {
+              this.fire('scroll-to-contact');
 //                window.open('mailto:miller.aundra@gmail.com', '_blank');
 //                console.log('to email we go!');
-            }
-        });
-    </script>
+          }
+      });
+  </script>
 </dom-module>
