@@ -97,7 +97,8 @@
 
     </div>
 
-    <paper-toast id="toast0" text="This toast auto-closes after 3 seconds"></paper-toast>
+    <paper-toast id="success-toast" text="Email copied to clipboard."></paper-toast>
+    <paper-toast id="error-toast" text="Error while copying."></paper-toast>
 
   </template>
 
@@ -113,14 +114,15 @@
           attached: function () {
               this.debounce('prepareClilpboard', function () {
                   var element = this.$['copy-email-icon'];
+                  var successToast = this.$['success-toast'];
+                  var errorToast = this.$['error-toast'];
                   var clipboard = new Clipboard(element);
                   clipboard.on('success', function (e) {
-                      console.log('success!');
+                      successToast.open();
                   });
                   clipboard.on('error', function (e) {
-                      console.log('ERROR!');
-                  });
-
+                      errorToast.open();
+                 });
               }, 300)
           },
 
