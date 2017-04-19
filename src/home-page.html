@@ -191,7 +191,8 @@
 
           listeners: {
               'open-linkedin': 'navigateToLinkedIn',
-              'open-github': 'navigateToGitHub'
+              'open-github': 'navigateToGitHub',
+              'copy-email': 'copyEmailAddress'
           },
 
           navigateToLinkedIn: function () {
@@ -199,6 +200,11 @@
           },
           navigateToGitHub: function () {
               window.open('https://www.github.com/milleraundra', '_blank');
+          },
+          navigateToEmail: function () {
+
+                  window.prompt("Copy to clipboard: Ctrl+C, Enter", 'miller.aundra@gmail.com');
+//              window.open('mailto:miller.aundra@gmail.com');
           }
 
 //

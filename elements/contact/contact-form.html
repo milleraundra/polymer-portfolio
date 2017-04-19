@@ -14,7 +14,9 @@
       }
 
       #contact-form-input-wrapper {
-        width: 100%;
+        /*width: 100%;*/
+        width: calc(100% - 16px);
+        padding: 8px;
         max-width: 500px;
         text-align: center; /* TODO remove when form is restored */
         @apply(--layout-vertical);
@@ -76,6 +78,7 @@
           <iron-icon id="email-icon" class="email-icon"
                      icon="icons:mail"></iron-icon>
           miller.aundra@gmail.com
+          <iron-icon icon="icons:content-copy" on-tap="copyEmail"></iron-icon>
         </p>
         <p class="contact-option" on-tap="openLinkedIn">
           <iron-image id="linkedin-icon" class="linkedin-image"
@@ -95,6 +98,10 @@
 
           openLinkedIn: function() {
               this.fire('open-linkedin');
+          },
+
+          copyEmail: function() {
+              this.fire('copy-email');
           },
 
           validateFormInput: function () {
